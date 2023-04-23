@@ -8,7 +8,7 @@ let recogerValor= ((e)=>{
   const palabraIngresada = document.querySelector("[data-texto]");
   let letras = palabraIngresada.value.toLowerCase().split("");
   const mensajeFinal =mostrarPalabra(primerDigito(letras), ultimoGuion(letras), true,letras, palabraIngresada.value);
-  mostrarlo.innerHTML = `<h1> ${mensajeFinal} </h1>`;
+  mostrarlo.innerHTML = `<h2> ${mensajeFinal} </h2>`;
   mostrarlo.className ="meow";
 });
 
@@ -17,6 +17,7 @@ submit.addEventListener('click', recogerValor);
 let primerDigito = (letras) => {
   for (let i = 0; i < 10; i++) {
     if (letras[0] == i) return true;
+    
   }
 };
 
