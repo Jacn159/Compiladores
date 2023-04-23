@@ -1,19 +1,18 @@
 //1digito Xletra 1guionbajo
-const palabraIngresada = "";
+const palabraIngresada = "1cana5555les_";
 
 let mostrarPalabra = (palabra) => {
   let letras = palabra.toLowerCase().split("");
-  let valor1;
-  let valor2;
+  let valor1 = false;
+  let valor2 = false;
+  let valor3 = true;
   for (let i = 0; i < 10; i++) {
     if (letras[0] == i) {
-      console.log("Es un digito", i);
       valor1 = true;
       break;
     }
   }
   if (letras[letras.length - 1] == "_") {
-    console.log("hay un guion bajo al final: ", "_");
     valor2 = true;
   }
   let abecedario = [
@@ -46,22 +45,32 @@ let mostrarPalabra = (palabra) => {
     "z",
   ];
   if (valor1 == true && valor2 == true) {
-    let i = 0;
     letras.pop();
     letras.shift();
-    console.log(letras);
-    for (const letra of letras) {
-      for (const letters of abecedario) {
-        if (letra == letters) {
-          console.log("encontró la letra", letters, letra);
-          break;
-        } else {
-          i++;
+    let aux = true;
+    //1c_
+    if (letras.length > 0) {
+      for (const letra of letras) {
+        if (aux) {
+          //cb c5
+          for (const letters of abecedario) {
+            if (letra == letters) {
+              //   console.log("encontró la letra", letters, letra);
+              aux = true;
+              valor3=true;
+              break;
+            } else {
+              // console.log("no cumple");
+              aux = false;
+              valor3 = false;
+            }
+          }
         }
       }
-    }
-    console.log(i);
-  }
+      const mensaje =valor3 ? "Cumple" : "No cumple";
+      console.log(mensaje , palabra);
+    } else console.log("No cumple", palabra);
+  } else console.log("no cumple con los requerimientos", palabra);
 };
 
 mostrarPalabra(palabraIngresada);
