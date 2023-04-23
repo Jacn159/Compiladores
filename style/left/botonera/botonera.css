@@ -1,0 +1,18 @@
+.botonera{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+.boton{
+    background: rgb(224, 133, 42);
+    color: aliceblue;
+    border: none;
+    padding: 1rem;
+    border-radius: 15px;
+    outline: none;
+}
+.boton:hover{
+    box-shadow: 4px 4px 4px #00000053;
+    transition: 0.2s;
+
+}

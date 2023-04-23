@@ -1,20 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style/style.css">
-</head>
-<body>
-    <form action="">
-        <input type="text" name="" id="" data-texto>
-        <input type="submit" value="Enviar" data-submit>
-    </form>
-    <div data-respuesta>
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/left/left.css" />
+    <link rel="stylesheet" href="style/left/header/header.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/rigth/rigth.css" />
+    <link rel="stylesheet" href="style/rigth/menu/menu.css" />
+    <link rel="stylesheet" href="style/left/contenedor/contenedor.css" />
+    <link rel="stylesheet" href="style/left/botonera/botonera.css" />
+    <link rel="stylesheet" href="style/left/article/article.css" />
+    <link rel="stylesheet" href="style/rigth/imagen/imagen.css" />
+    <link rel="stylesheet" href="style/rigth/respuesta/respuesta.css">
+  </head>
+  <body>
+    <main>
+      <div class="left">
+        <header>
+          <!-- <h1>Autómata</h1> -->
+          <img src="img/logo.png" alt="" />
+        </header>
+        <div class="contenedor">
+          <article>
+            <p>Hola a todos, este es nuestro automata</p>
+          </article>
+          <form >
+            <textarea
+              class="input"
+              data-texto
+              placeholder="Escribe..."         
+            ></textarea>
+            <div class="botonera">
+              <input class="boton" type="submit" value="Enviar" data-submit />
+              <button class="boton"  value="Borrar"  data-borrar/>Borrar</button>
 
-    </div>
-</body>
-<script src="js/Automata.js"></script>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- <img src="" alt=""> -->
+
+      <div class="right">
+        <nav>
+          <ul class="menu">
+            <li>Casma</li>
+            <li>Pachas?</li>
+            <li>Canales</li>
+            <li>Magallanes</li>
+            <li class="mostrar">Mostrar Más</li>
+          </ul>
+        </nav>
+        <div data-imagen>
+          <div class="imagen">
+            <img src="img/buscador.png" alt="" />
+          </div>
+          <p class="nofound">Ninguna palabra fue encontrada</p>
+        </div>
+
+        <div data-respuesta>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="js/Automata.js"></script>
 </html>

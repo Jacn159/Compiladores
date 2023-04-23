@@ -1,0 +1,14 @@
+.respuesta{
+    display: flex;
+    justify-content: center;
+
+    max-width: 92%; /* Agrega un ancho máximo al contenedor */
+    margin: auto;
+    margin-top: 35%;
+}
+.respuesta p {
+    max-width: 100%; /* Establece un ancho máximo igual al ancho del contenedor */
+    margin: 0; /* Elimina cualquier margen predeterminado que tenga el h2 */
+    text-align: center; /* Centra el texto dentro del h2 */
+    word-wrap: break-word;
+  }

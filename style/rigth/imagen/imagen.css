@@ -1,0 +1,25 @@
+.imagen{
+    display: flex;
+    justify-content: center;
+}
+.imagen p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.imagen img{
+    padding-top: 6rem !important;
+    width: 20rem;
+}
+.nofound{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    padding-left: 3.5rem;
+}
+.imagen2{
+    display: none;
+    justify-content: center;
+}
+.imagen2 img {
+    width: 20rem;
+}

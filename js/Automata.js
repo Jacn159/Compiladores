@@ -1,29 +1,45 @@
 //1digito Xletra 1guionbajo
 const submit = document.querySelector("[data-submit]");
 const mostrarlo = document.querySelector("[data-respuesta]");
-
-
-let recogerValor= ((e)=>{
+const borrar = document.querySelector("[data-borrar]");
+const imagen = document.querySelector("[data-imagen]");
+let comparar = (e) => {
   e.preventDefault();
+  imagen.classList.remove("imagen2");
+  const palabra = document.querySelector("[data-texto]");
+  mostrarlo.innerHTML="";
+  palabra.value = ""; // Agregar esta línea para borrar el contenido del textarea
+};
+
+borrar.addEventListener("click", comparar);
+
+let recogerValor = (e) => {
+  e.preventDefault();
+  imagen.classList.add("imagen2");
   const palabraIngresada = document.querySelector("[data-texto]");
   let letras = palabraIngresada.value.toLowerCase().split("");
-  const mensajeFinal =mostrarPalabra(primerDigito(letras), ultimoGuion(letras), true,letras, palabraIngresada.value);
-  mostrarlo.innerHTML = `<h2> ${mensajeFinal} </h2>`;
-  mostrarlo.className ="meow";
-});
+  const mensajeFinal = mostrarPalabra(
+    primerDigito(letras),
+    ultimoGuion(letras),
+    true,
+    letras,
+    palabraIngresada.value
+  );
+  mostrarlo.innerHTML = `<p> ${mensajeFinal} </p>`;
+  mostrarlo.className = "respuesta";
+};
 
-submit.addEventListener('click', recogerValor);
+submit.addEventListener("click", recogerValor);
 
 let primerDigito = (letras) => {
   for (let i = 0; i < 10; i++) {
     if (letras[0] == i) return true;
-    
   }
 };
 
 let ultimoGuion = (letras) => letras[letras.length - 1] == "_";
 
-let mostrarPalabra = (valor1, valor2, valor3,letras, palabra) => {
+let mostrarPalabra = (valor1, valor2, valor3, letras, palabra) => {
   let abecedario = [
     "a",
     "b",
@@ -73,12 +89,10 @@ let mostrarPalabra = (valor1, valor2, valor3,letras, palabra) => {
       }
       const mensaje = valor3 ? "Cumple " : "No cumple ";
       return mensaje + palabra;
-    } else return("No cumple, porque no tiene letras en medio "+ palabra);
+    } else return "No cumple, porque no tiene letras en medio " + palabra;
   } else
-    return(
-      "No cumple con los requerimientos, porque necesita un digito al inicio o un guion bajo al final "+
+    return (
+      "No cumple con los requerimientos, porque necesita un digito al inicio o un guion bajo al final " +
       palabra
     );
 };
-
-

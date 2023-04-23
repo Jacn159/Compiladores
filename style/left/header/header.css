@@ -1,0 +1,10 @@
+header{
+    padding-top: 0rem;
+    margin-left: 2.5rem;
+}
+header h1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
