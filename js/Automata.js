@@ -6,6 +6,7 @@ const imagen = document.querySelector("[data-imagen]");
 let comparar = (e) => {
   e.preventDefault();
   imagen.classList.remove("imagen2");
+  card.style.display = "none";
   const palabra = document.querySelector("[data-texto]");
   mostrarlo.innerHTML="";
   palabra.value = ""; // Agregar esta línea para borrar el contenido del textarea
@@ -16,6 +17,8 @@ borrar.addEventListener("click", comparar);
 let recogerValor = (e) => {
   e.preventDefault();
   imagen.classList.add("imagen2");
+  mostrarlo.style.display = "flex";
+  card.style.display = "none";
   const palabraIngresada = document.querySelector("[data-texto]");
   let letras = palabraIngresada.value.toLowerCase().split("");
   const mensajeFinal = mostrarPalabra(
@@ -96,3 +99,6 @@ let mostrarPalabra = (valor1, valor2, valor3, letras, palabra) => {
       palabra
     );
 };
+
+
+

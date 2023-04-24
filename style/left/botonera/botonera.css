@@ -14,5 +14,6 @@
 .boton:hover{
     box-shadow: 4px 4px 4px #00000053;
     transition: 0.2s;
+    cursor: pointer;
 
 }

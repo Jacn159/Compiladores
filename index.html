@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="style/left/article/article.css" />
     <link rel="stylesheet" href="style/rigth/imagen/imagen.css" />
     <link rel="stylesheet" href="style/rigth/respuesta/respuesta.css">
+    <link rel="stylesheet" href="style/rigth/card/card.css">
   </head>
   <body>
     <main>
@@ -48,11 +49,10 @@
       <div class="right">
         <nav>
           <ul class="menu">
-            <li>Casma</li>
-            <li>Pachas?</li>
-            <li>Canales</li>
-            <li>Magallanes</li>
-            <li class="mostrar">Mostrar Más</li>
+            <li class="mostrar" data-casma>Casma</li>
+            <li class="mostrar" data-pachas>Pachas?</li>
+            <li class="mostrar" data-canales>Canales</li>
+            <li class="mostrar" data-magallanes>Magallanes</li>
           </ul>
         </nav>
         <div data-imagen>
@@ -61,11 +61,15 @@
           </div>
           <p class="nofound">Ninguna palabra fue encontrada</p>
         </div>
-
+        <div data-card></div>
         <div data-respuesta>
         </div>
       </div>
     </main>
   </body>
   <script src="js/Automata.js"></script>
+  <script src="js/casma.js"></script>
+  <script src="js/pachas.js"></script>
+  <script src="js/canales.js"></script>
+  <script src="js/magallanes.js"></script>
 </html>

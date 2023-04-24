@@ -1,0 +1,48 @@
+.card {
+    text-align: center;
+    background: #adcdecd6;
+    width: 50%;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 5rem;
+    padding: 5rem 1rem;
+    box-shadow: 4px 4px 4px #00000053;
+  }
+  
+  .card img {
+    width: 15rem;
+    border-radius: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .card p {
+    font-size: 25px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+  }
+  
+  .redes ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 2rem;
+    
+  }
+  
+  .redes a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+
+  }
+  
+  .redes a:hover {
+    transition: 0.3s;
+    box-shadow: 4px 4px 4px #00000053;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+
+  }
+  

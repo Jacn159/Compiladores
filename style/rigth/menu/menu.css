@@ -8,14 +8,16 @@
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
+    cursor: pointer;
 }
 .mostrar {
-    background-color: #155FBF;
+
     border-radius: 15px;
     padding: 0.8rem 1rem;
 
 }
 .mostrar:hover{
+    background-color: #155FBF;
     box-shadow: 4px 4px 4px #00000053;
     transition: 0.4s;
     padding: 1rem 1.4rem;
