@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CampoTexto from "../campoTexto";
-const Input = () => {
+import "./input.css"
+const Input = (props) => {
  const [palabra, setPalabra] = useState("");
 
  const manejarEnvios = (evento) =>{
@@ -10,11 +11,20 @@ const Input = () => {
     // }
     // console.log(datosAEnviar);
  }
+ const borrarTexto = () => {
+  setPalabra("");
+};
   return (
-    <div>
+    <div className="Input">
       <form onSubmit={manejarEnvios}>
-        <CampoTexto  valor={palabra} actualizarValor={setPalabra}/>
+        <CampoTexto
+          valor={palabra}
+          actualizarValor={setPalabra}
+          click={props.click}
+          borrarTexto={borrarTexto}
+        />
       </form>
+     
     </div>
   );
 };

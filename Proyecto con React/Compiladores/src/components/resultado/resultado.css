@@ -1,0 +1,26 @@
+.resultado {
+  display: none;
+  width: 30%;
+  height: 56%;
+
+  background: linear-gradient(to left bottom, #3d92dc, #052da6),
+    linear-gradient(to right bottom, #eab045, #f28e13);
+  background-size: calc(50% + 1px) 100%, calc(50% + 1px) 100%;
+  background-position: left top, right top;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  position: absolute;
+  word-wrap: break-word;
+  left: 34%;
+  top: 15%;
+  padding: 1rem;
+  box-shadow: 4px 4px 4px 4px black;
+  transition: 0.2s;
+}
+.resultado h1 {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  margin-top: 30%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
