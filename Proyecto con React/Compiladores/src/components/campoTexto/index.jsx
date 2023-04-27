@@ -13,13 +13,16 @@ const campoTexto = (props) => {
   };
 
   let meow = () => {
-    setOcultar("flex")
+    setOcultar("1")
     const resultado = compilador(props.valor);
-    setWau(resultado);
+    if (resultado=="") {
+        setOcultar("0")
+    }else setWau(resultado);
+    
   };
   const aparecer = ()=> {
     props.borrarTexto();
-    setOcultar("none")
+    setOcultar("0")
   }
   return (
     <div>

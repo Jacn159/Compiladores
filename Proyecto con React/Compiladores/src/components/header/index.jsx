@@ -11,20 +11,29 @@ const Header = () => {
     linkedin: "",
   });
 
-  const showCard = (imagen, nombre, github, linkedin) => {
-    setCardData({
-      imagen: imagen,
-      nombre: nombre,
-      github: github,
-      linkedin: linkedin,
-    });
-    setCardVisible(true);
-  };
+  const [showSearch, setShowSearch] = useState(true);
 
+  const showCard = (imagen, nombre, github, linkedin) => {
+    setShowSearch(false);
+    hideCard();
+    setTimeout(() => {
+      setCardData({
+        imagen: imagen,
+        nombre: nombre,
+        github: github,
+        linkedin: linkedin,
+      });
+      setCardVisible(true);
+    }, 0);
+  };
+  
   const hideCard = () => {
     setCardVisible(false);
+    setTimeout(() => {
+      setShowSearch(true);
+    }, 0);
+    
   };
-
   return (
     <header className="Header">
       <img className="logo" src="/src/assets/logo.png" alt="" />
@@ -45,22 +54,32 @@ const Header = () => {
         </ul>
       </nav>
       {cardVisible ? (
-        <div className="overlay" onClick={hideCard}>
-          <Cards
-            imagen={cardData.imagen}
-            nombre={cardData.nombre}
-            github={cardData.github}
-            linkedin={cardData.linkedin}
-          />
+      <div>
+        <div className="transition">
+          <img src="/src/assets/cargando.gif" alt="" />
         </div>
-      ) : (
+              <div className="overlay">
+        
+        <Cards
+          imagen={cardData.imagen}
+          nombre={cardData.nombre}
+          github={cardData.github}
+          linkedin={cardData.linkedin}
+          regresar={hideCard}
+        />
+      </div>
+      </div>
+
+    ) : (
+      showSearch && (
         <div className="buscador">
           <div className="imagen">
             <img src="/src/assets/buscador.png" alt="" />
           </div>
           <p className="nofound">Selecciona un integrante</p>
         </div>
-      )}
+      )
+    )}  
     </header>
   );
 };

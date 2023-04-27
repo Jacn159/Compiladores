@@ -72,3 +72,29 @@
 .imagen2 img {
     width: 20rem;
 }
+
+.transition img{
+    width: 75px;
+}
+.transition {
+    margin-top: 20rem;
+    margin-left: 32rem;
+    width: 75px;
+    animation-name: fade-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  

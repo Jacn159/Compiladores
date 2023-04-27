@@ -22,6 +22,7 @@ const Cards = (props) => {
             </a>
           </li>
         </ul>
+        <button className="regresar" onClick={props.regresar}> 👈</button>
       </div>
     </div>
   );
